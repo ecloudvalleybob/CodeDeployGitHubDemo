@@ -2,7 +2,7 @@ version: 0.2
 phases:
   build:
     commands:
-      -zip -r mysource.zip /
+      - zip -r mysource.zip /
 artifacts:
   files:
     - '**/*'
