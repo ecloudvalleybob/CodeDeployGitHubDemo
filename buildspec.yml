@@ -1,8 +1,4 @@
-version: 0.2         
-phases:
-  build:
-    commands:
-      - zip -r mysource.zip /
+version: 0.2
 artifacts:
   files:
     - '**/*'
