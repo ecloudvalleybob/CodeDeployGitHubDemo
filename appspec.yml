@@ -4,8 +4,12 @@ files:
   - source: /
     destination: /var/www/html
 hooks:
+  BeforeInstall:
+    - location: scripts/before
+      timeout: 180
+      runas: root
   AfterInstall:
-    - location: scripts/unzip
+    - location: scripts/after
       timeout: 180
       runas: root
   ValidateService:
