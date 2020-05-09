@@ -1,0 +1,3 @@
+#/bin/bash
+rm -rfv /var/www/html &>> /var/log/codepipeline.log
+mkdir /var/www/html &> /dev/null
