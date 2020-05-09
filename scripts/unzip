@@ -1,10 +1,8 @@
 #/bin/bash
 mkdir /tmp/unzip &> /var/log/codepipeline.log
-unzip -o /tmp/milwaukeetool.zip -d /tmp/unzip &>> /var/log/codepipeline.log
-rm /var/www/html/milwaukee/wp-content/uploads &>> /var/log/codepipeline.log
-rm -rfv /var/www/html/milwaukee &>> /var/log/codepipeline.log
-mkdir /var/www/html/milwaukee &> /dev/null
-mv -f /tmp/unzip/*/* /var/www/html/milwaukee &>> /var/log/codepipeline.log
-ln -s /mnt/efs /var/www/html/milwaukee/wp-content/uploads &>> /var/log/codepipeline.log
-rm -f /tmp/milwaukeetool.zip &>> /var/log/codepipeline.log
-sudo service apache2 restart
+unzip -o /tmp/bob-test.zip -d /tmp/unzip &>> /var/log/codepipeline.log
+rm -rfv /var/www/html/ &>> /var/log/codepipeline.log
+mkdir /var/www/html/ &> /dev/null
+mv -f /tmp/unzip/*/* /var/www/html &>> /var/log/codepipeline.log
+rm -f /tmp/bob-test.zip &>> /var/log/codepipeline.log
+sudo service httpd restart
