@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /bob-test.zip
-    destination: /tmp
+  - source: /
+    destination: /var/www/html
 hooks:
   AfterInstall:
     - location: scripts/unzip
